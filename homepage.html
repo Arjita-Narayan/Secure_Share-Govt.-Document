@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./homepage.js"></script>
+    <script type="module" src="./phoneLinker.js"></script>
+  </head>
+  <style>
+    .input {
+      color: white;
+      border: 2px solid #8707ff;
+      border-radius: 10px;
+      padding: 10px 25px;
+      background: transparent;
+      max-width: 350px;
+      margin-bottom: 50px;
+      margin-top: 50px;
+    }
+
+    .input:active {
+      box-shadow: 2px 2px 15px #8707ff inset;
+    }
+    .input::placeholder {
+      color: #181717; /* A light color that contrasts well with the background */
+    }
+    /* From Uiverse.io by Praashoo7 */
+    button {
+      outline: none;
+      color: #b0b0d8;
+      padding: 1em;
+      padding-left: 3em;
+      padding-right: 3em;
+      border: 2px solid #daa06d;
+      border-radius: 15px;
+      background-color: #6376c9;
+      transition: 0.1s ease-in-out, 0.4s color;
+      /* position: absolute;
+      display: inline-block;
+      width: auto; */
+    }
+
+    button:active {
+      transform: translateX(0.1em) translateY(0.1em);
+      box-shadow: 0 0 0 4px #eaddca, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+  <body>
+    <h1>WELCOME TO THE HOMEPAGE</h1>
+
+    <form id="phoneForm">
+      <input
+        id="phoneNumber"
+        name="phoneNumber"
+        type="tel"
+        placeholder="Enter your mobile number here.."
+        class="input"
+        pattern="\+91\d{10}"
+        title="Please enter a valid phone number with '+91' followed by 10 digits"
+      />
+      <button type="submit">Link Phone Number</button>
+    </form>
+    <div id="recaptcha-container"></div>
+    <div id="verify-code" style="display: none; padding-top: 20px !important">
+      <div class="input-group">
+        <i class="fas fa-key"></i>
+        <input type="text" id="otp" placeholder="Enter OTP" required />
+        <label for="otp">OTP</label>
+      </div>
+      <button class="btn" id="verifyOtpButton" type="button">Verify OTP</button>
+    </div>
+    <div id="signInMessage" class="messageDiv" style="display: none"></div>
+    <div id="userDetails">
+      <div>First Name: <span id="loggedUserFName"></span></div>
+      <div>Last Name: <span id="loggedUserLName"></span></div>
+      <div>Email: <span id="loggedUserEmail"></span></div>
+    </div>
+
+    <button id="myProfile">My Profile</button>
+
+    <button id="logout">Logout</button>
+
+    <!-- File Upload Section -->
+    <div>
+      <input type="file" id="fileInput" />
+      <button id="uploadButton">Upload File</button>
+      <button id="fileList">Saved Files</button>
+    </div>
+  </body>
+</html>
