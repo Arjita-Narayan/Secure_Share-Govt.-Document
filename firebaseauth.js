@@ -89,7 +89,6 @@ window.recaptchaVerifier = new RecaptchaVerifier(
   {
     size: "invisible",
     callback: (response) => {
-      // reCAPTCHA solved, allow user to proceed
       if (document.getElementById("signInPhone").checked) {
         sendVerificationCode();
       }
@@ -168,15 +167,10 @@ signIn.addEventListener("click", (event) => {
   }
 });
 
-// Monitor authentication state
 auth.onAuthStateChanged((user) => {
   if (user) {
-    // User is signed in
     console.log("User is signed in:", user.uid);
-    // Proceed with fetching files or other authenticated actions
   } else {
-    // No user is signed in
     console.log("No user is signed in");
-    // Handle unauthenticated state
   }
 });

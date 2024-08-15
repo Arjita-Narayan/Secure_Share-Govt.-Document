@@ -32,5 +32,3 @@ phoneRadio.addEventListener("change", function () {
     phoneSignInFields.style.display = "block";
   }
 });
-
-// Firebase functions and event listeners as before

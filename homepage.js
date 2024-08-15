@@ -49,8 +49,6 @@ onAuthStateChanged(auth, (user) => {
         .then((docSnap) => {
           if (docSnap.exists()) {
             const userData = docSnap.data();
-            // Optionally you can load user details on page load
-            // displayUserDetails(userData);
           } else {
             console.log("No document found matching the ID");
           }
@@ -108,22 +106,19 @@ const fileInput = document.getElementById("fileInput");
 uploadButton.addEventListener("click", () => {
   const file = fileInput.files[0]; // Get the selected file
   if (file) {
-    // You can now process the file upload
     console.log("File selected:", file.name);
 
     const storage = getStorage();
     const user = auth.currentUser;
     if (user) {
-      // Create a reference to the user's folder in Firebase Storage
       const storageRef = ref(storage, `uploads/${user.uid}/${file.name}`);
       const uploadTask = uploadBytes(storageRef, file);
 
       uploadTask
         .then((snapshot) => {
           console.log("Uploaded a blob or file!");
-          alert("File uploaded successfully"); // Alert on successful upload
+          alert("File uploaded successfully");
 
-          // Clear the file input field
           fileInput.value = "";
         })
         .catch((error) => {
@@ -139,7 +134,7 @@ uploadButton.addEventListener("click", () => {
 
 // Redirect to files.html on button click
 document.getElementById("fileList").addEventListener("click", () => {
-  window.location.href = "files.html"; // Redirect to files.html
+  window.location.href = "files.html";
 });
 
 document

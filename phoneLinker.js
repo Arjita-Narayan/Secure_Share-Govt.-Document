@@ -121,13 +121,6 @@ document
   .getElementById("verifyOtpButton")
   .addEventListener("click", verifyCode);
 
-// Example usage of sending OTP
-// Replace with actual phone number and OTP code
-
 document
   .getElementById("phoneForm")
   .addEventListener("submit", sendVerificationCode);
-
-// HTML element for reCAPTCHA
-// Add this to your HTML:
-// <div id="recaptcha-container"></div>
