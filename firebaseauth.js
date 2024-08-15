@@ -13,9 +13,11 @@ import {
   doc,
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
+// Use firebaseConfig in your application
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCBPbk1aVTNMnrUOJZu6Fpg-lVr6shf0K4",
+  apiKey: "ENTER_YOUR_OWN_API_KEY",
   authDomain: "form-authentication-5cf22.firebaseapp.com",
   projectId: "form-authentication-5cf22",
   storageBucket: "form-authentication-5cf22.appspot.com",

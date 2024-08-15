@@ -21,9 +21,10 @@ import {
   uploadBytes,
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-storage.js";
 
+import { firebaseConfig } from "./firebaseConfig";
 // Your Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyCBPbk1aVTNMnrUOJZu6Fpg-lVr6shf0K4",
+  apiKey: "ENTER_YOUR_OWN_API_KEY",
   authDomain: "form-authentication-5cf22.firebaseapp.com",
   projectId: "form-authentication-5cf22",
   storageBucket: "form-authentication-5cf22.appspot.com",

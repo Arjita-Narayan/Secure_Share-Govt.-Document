@@ -17,7 +17,7 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCBPbk1aVTNMnrUOJZu6Fpg-lVr6shf0K4",
+  apiKey: "ENTER_YOUR_OWN_API_KEY",
   authDomain: "form-authentication-5cf22.firebaseapp.com",
   projectId: "form-authentication-5cf22",
   storageBucket: "form-authentication-5cf22.appspot.com",
